@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(45deg, #d2001a, #7462ff, #f48e21, #23d5ab);
+    background-size: 300% 300%;
+    animation: color 12s ease-in-out infinite;
+  }
+  
+  @keyframes color {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    min-height:90vh;
+}
+
+.box{
+    background: #fdfdfd;
+    display: flex;
+    flex-direction: column;
+    padding: 25px 25px;
+    border-radius: 20px;
+    box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),
+                0 32px 64px -48px rgba(0,0,0,0.5);
+}
+
+.form-box{
+    width: 450px;
+    margin: 0px 10px;
+}
+
+.form-box header{
+    font-size: 25px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e6e6e6;
+    margin-bottom: 10px;
+}
+
+.form-box form .field{
+    display:flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.form-box form .input input{
+    height: 40px;
+    width: 100%;
+    font-size: 16px;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline:none;
+}
+
+.btn{
+    height: 35px;
+    background: rgba(76,68,182,0.808);
+    border: 0;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 15px;
+    cursor:pointer;
+    transition: all .3s;
+    margin-top: 10px;
+    padding: 0px 10px;
+}
+
+.submit{
+    width: 100%;
+}
+
+.btn:hover{
+    opacity: 0.82;
+}
+
+.links{
+    margin-bottom: 15px;
+}
+
+/*************** home page ****************/
+
+.nav{
+    background: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    line-height: 60px;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.logo a{
+    text-decoration: none;
+    color: #000;
+}
+
+.right-links a{
+    padding: 0 10px;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.main-box{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+.main-box .top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.button{
+    width: 100%;
+    margin-top:20px; 
+}
+
+@media only screen and (max-width:840px){
+    .main-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .top .box{
+        margin: 10px 10px; 
+    }
+
+    .bottom{
+        margin-top: 0;
+    }
+}
+
+.message{
+    text-align: center;
+    background: #f9eded;
+    padding: 15px 0px;
+    border: 1px solid #699053;
+    border-radius: 50px;
+    margin-bottom: 10px;
+    color: red;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+.person-container {
+    min-height: 100vh;
+    display: flex;
+}
+
+.person {
+    flex: 2;
+    overflow: hidden;
+    position: relative;
+    transition: 0.5s ease;
+}
+
+.person:hover {
+    flex: 5;
+    cursor: pointer;
+}
+
+.person img {
+    position: absolute;
+    height: 100vh;
+    left: 50%;
+    transform: translateX(-50%);
+    filter: grayscale(10);
+    transition: 0.2s ease;
+}
+
+.info {
+    position: absolute;
+    color: #fff;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    bottom: -200px;
+    text-align: center;
+    transition: 0.4s ease;
+}
+
+.info .social-media {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-media a {
+    text-decoration: none;
+    color: #fff;
+    background: #111;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 17px;
+}
+
+.person:hover .info {
+    bottom: 80px;
+}
+
+.person:hover img {
+    filter: grayscale(0);
+}
