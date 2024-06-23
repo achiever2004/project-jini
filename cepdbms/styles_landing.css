@@ -1,0 +1,436 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    color: #fff;
+    list-style: none;
+    font-family: sans-serif;
+}
+  
+
+.container {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    height: 330px;
+    width: 330px;
+    border-radius: 50%;
+    background: linear-gradient(#08ffe6, #fcd200);
+    transform: translate(-490px, -150px);
+}
+
+.container::after {
+    content: '';
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    background: linear-gradient(#fcd200, #fc002e);
+    transform: translate(490px, 170px);
+}
+
+.container .ball-1 {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background: #04f504;
+    transform: translate(-250px, 200px);
+    position: absolute;
+}
+
+.container .ball-2 {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background: #08e2ff;
+    transform: translate(-10px, -220px);
+    position: absolute;
+}
+
+.container .ball-3 {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: #ffc404;
+    transform: translate(150px, 250px);
+    position: absolute;
+}
+
+.container .box {
+    height: 86vh;
+    width: 75%;
+    padding: 0 20px;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 10;
+    display: flex;
+    position: relative;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(25px); /* important!! */
+    box-shadow: -15px 17px 17px rgba(10, 10, 10, 0.25);
+}
+
+.container .box nav {
+    height: 7%;
+    width: 95%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 15px auto;
+    padding: 20px;
+}
+
+.container .box nav ul li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.container .box nav ul li a {
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.container .box nav ul li a:hover {
+    color: #ffc404;
+}
+
+.container .box nav .logo {
+    font-size: 35px;
+    color: #000;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.container .box .contains {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 80%;
+    position: relative;
+    margin-top:70px;
+    padding-left: 80px;
+}
+
+.container .box .contains .section-1 {
+    position: absolute;
+    margin-top: 20px;
+}
+
+.container .box .contains .section-1 h1 {
+    font-size: 75px;
+}
+
+.container .box .contains .section-1 h3 {
+    font-size: 36px;
+}
+
+.container .box .contains .section-1 p {
+    margin-top: 5px;
+}
+
+.container .box .contains .section-1 .button {
+    margin-top: 50px;
+}
+
+.container .box .contains .section-1 .button a {
+    padding: 10px 20px;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+
+.container .box .contains .section-1 .button a:hover {
+    background: #fff;
+    color: #000;
+}
+
+.container .box .contains .section-2 img {
+    width: 600px;
+    height: auto;
+    transform: translateX(380px);
+}
+
+span {
+    color: #fc002e;
+    font-size: 40px;
+}
+
+/* Responsive Design */
+
+/* Mobile Phones */
+@media only screen and (max-width: 600px) {
+    .container::before {
+        height: 200px;
+        width: 200px;
+        transform: translate(-200px, -100px);
+    }
+    .container::after {
+        height: 180px;
+        width: 180px;
+        transform: translate(200px, 100px);
+    }
+    .container .ball-1 {
+        height: 15px;
+        width: 15px;
+        transform: translate(-120px, 100px);
+    }
+    .container .ball-2 {
+        height: 35px;
+        width: 35px;
+        transform: translate(-5px, -110px);
+    }
+    .container .ball-3 {
+        height: 25px;
+        width: 25px;
+        transform: translate(75px, 125px);
+    }
+    .container .box {
+        width: 90%;
+        height: auto;
+        padding: 10px;
+        box-shadow: none;
+    }
+    .container .box .contains {
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0;
+    }
+    .container .box .contains .section-1 {
+        position: static;
+        margin-top: 20px;
+    }
+    .container .box .contains .section-1 h1 {
+        font-size: 36px;
+    }
+    .container .box .contains .section-1 h3 {
+        font-size: 18px;
+    }
+    .container .box .contains .section-1 p {
+        font-size: 14px;
+    }
+    .container .box .contains .section-1 .button a {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+/* Tablets */
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+    .container::before {
+        height: 250px;
+        width: 250px;
+        transform: translate(-300px, -120px);
+    }
+    .container::after {
+        height: 230px;
+        width: 230px;
+        transform: translate(300px, 140px);
+    }
+    .container .ball-1 {
+        height: 20px;
+        width: 20px;
+        transform: translate(-150px, 120px);
+    }
+    .container .ball-2 {
+        height: 50px;
+        width: 50px;
+        transform: translate(-10px, -150px);
+    }
+    .container .ball-3 {
+        height: 35px;
+        width: 35px;
+        transform: translate(90px, 160px);
+    }
+    .container .box {
+        width: 85%;
+        height: auto;
+        padding: 10px;
+        box-shadow: none;
+    }
+    .container .box .contains {
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0;
+    }
+    .container .box .contains .section-1 {
+        position: static;
+        margin-top: 20px;
+    }
+    .container .box .contains .section-1 h1 {
+        font-size: 48px;
+    }
+    .container .box .contains .section-1 h3 {
+        font-size: 24px;
+    }
+    .container .box .contains .section-1 p {
+        font-size: 16px;
+    }
+    .container .box .contains .section-1 .button a {
+        display: block;
+        margin: 10px 0;
+    }
+    .container .box .contains .section-2 img {
+        width: 80%;
+        transform: translateX(0);
+        margin-top: 20px;
+    }
+}
+
+/* Desktops and Laptops */
+@media only screen and (min-width: 768px) {
+    .container .box {
+        width: 75%;
+        height: 86vh;
+    }
+    .container .box .contains {
+        flex-direction: row;
+        justify-content: space-between;
+        padding-left: 20px;
+    }
+    .container .box .contains .section-1 {
+        position: absolute;
+        
+    }
+    .container .box .contains .section-1 h1 {
+        font-size: 75px;
+    }
+    .container .box .contains .section-1 h3 {
+        font-size: 36px;
+    }
+    .container .box .contains .section-1 p {
+        margin-top: 5px;
+    }
+    .container .box .contains .section-1 .button {
+        margin-top: 50px;
+    }
+    .container .box .contains .section-1 .button a {
+        padding: 10px 20px;
+        border: 1px solid #fff;
+        cursor: pointer;
+    }
+    .container .box .contains .section-1 .button a:hover {
+        background: #fff;
+        color: #000;
+    }
+    .container .box .contains .section-1 img {
+        margin-top: 20px;
+        margin-bottom: 5px;
+    }
+}
+
+.Navbar{
+    backdrop-filter: blur(30px);
+    box-shadow: 0px 0px 30px rgba(227,228,237,0.37);
+    border: 2px solid rgba(255,255,255,0.18);
+}
+
+.butt {
+    position: relative;
+    margin-top: 20px;
+    width: 160px;
+    height: 50px;
+}
+
+.new_but {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.new_but:hover {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.new_but:active {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+.clo_exp_but {
+    display: flex;
+    flex-direction: row;
+}
+.butt {
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+
+.container .box .contains .glass {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    margin-top: 40px;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(25px);
+}
+
+.container .box .contains .glass-interaction{
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    /* margin-top: 40px; */
+    margin: 10px;;
+    border-radius: 40px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(25px);
+}
+
+.container .box .contains .glass h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.container .box .contains .glass form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-family: sans-serif;
+}
+
+.container .box .contains .glass form button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: 1px solid #fff;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border-radius: 5px;
+}
+
+.container .box .contains .glass form button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #000;
+}
+
+.button a:active {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+
+
